@@ -3,7 +3,7 @@ import Base from "./Base";
 import "../styles.css";
 import Card from "./card";
 import { getProducts } from "./helper/coreapicalls";
-import { Container, Image, Jumbotron } from "react-bootstrap";
+import { Container, Image } from "react-bootstrap";
 import { Carousel } from "react-bootstrap";
 
 const Home = () => {
@@ -61,12 +61,14 @@ const Home = () => {
 
       <div className="row">
         {products &&
+          !err &&
           products.map((prod, inde) => (
             <div className="col-md-4" key={inde}>
               <Card prod={prod} />
             </div>
           ))}
       </div>
+      <div className="m-5 p-2"></div>
     </Base>
   );
 };

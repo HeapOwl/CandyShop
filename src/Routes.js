@@ -18,7 +18,7 @@ import UpdateCategory from "./admin/UpdateCategory";
 import Landing from "./core/Landing";
 const Routes = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route path="/" exact component={Landing} />
         <Route path="/shop" exact component={Home} />

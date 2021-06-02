@@ -9,7 +9,7 @@ const Imghelper = ({ prod }) => {
     <div className="rounded card-img-top  ">
       <img
         src={imgurl}
-        alt="photo"
+        alt={`photo` + Math.random()}
         style={{ maxHeight: "100%", maxWidth: "100%" }}
         className="rounded"
       />

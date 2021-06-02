@@ -1,11 +1,11 @@
 import React from "react";
 import Base from "../core/Base";
-import { isAuthenticated } from "../auth/helper/index";
+// import { isAuthenticated } from "../auth/helper/index";
 import { Link } from "react-router-dom";
 const AdminDashboard = () => {
-  const {
-    user: { name, email, role },
-  } = isAuthenticated();
+  // const {
+  //   user: { name, email, role },
+  // } = isAuthenticated();
 
   const leftSide = () => {
     return (
@@ -48,6 +48,7 @@ const AdminDashboard = () => {
         }}
       >
         <iframe
+          title="shit post"
           src="https://giphy.com/embed/3ohc0Vhbf02CWDll2E"
           width="100%"
           height="100%"

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Nav, Navbar } from "react-bootstrap";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { signout, isAuthenticated } from "../auth/helper/index";
 import "./CSS/nav.css";
 const checkCurrTab = (history, path) => {
@@ -15,7 +15,7 @@ const checkCurrTab = (history, path) => {
 const Menu = ({ history }) => {
   const [colorChange, setColorchange] = useState(false);
   const changeNavbarColor = () => {
-    if (window.scrollY >= 50) {
+    if (window.scrollY >= 10) {
       setColorchange(true);
     } else {
       setColorchange(false);
@@ -25,15 +25,18 @@ const Menu = ({ history }) => {
   return (
     <Navbar
       id="mainNavbar"
-      className={colorChange ? "px-3 scrolled fixed-top" : "px-3"}
+      className={
+        colorChange ? "px-3 scrolled fixed-top pink " : "px-3 fixed-top pink"
+      }
       expand="lg"
+      collapseOnSelect
     >
       <Navbar.Brand href="/">
         CANDY STORE <i class="bi bi-cup-straw pr-3"></i>
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
+      <Navbar.Toggle aria-controls="navbarScroll" />
+      <Navbar.Collapse id="navbarScroll">
+        <Nav className="mr-auto my-2 my-lg-" navbarScroll>
           <Nav.Link style={checkCurrTab(history, "/shop")} href="/shop">
             Shop
             <i class="bi bi-shop-window px-2"></i>
@@ -56,7 +59,7 @@ const Menu = ({ history }) => {
           )}
           {isAuthenticated() && (
             <Nav.Link
-              style={{ color: "orange" }}
+              style={{ color: "red" }}
               onClick={(e) => {
                 signout(() => {
                   history.push("/signin");

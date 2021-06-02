@@ -14,7 +14,13 @@ const Home = () => {
 
   const loadProducts = () => {
     if (products.length == 0) {
-      return <h2 className="text-center text-dark py-5">No Item in Cart</h2>;
+      return (
+        <>
+          <h2 className="text-center text-dark py-5 mb-5 display-2">
+            Cart Empty ! <i class="bi bi-cart-x text-center text-dark" />
+          </h2>
+        </>
+      );
     }
     return (
       products &&
@@ -36,17 +42,17 @@ const Home = () => {
 
   return (
     <>
-      <Base
-        title="Welcome to Cart"
-        description="Ready to checkout"
-        className=" text-white"
-      >
+      <Base title="Welcome to Cart" description="Ready to checkout">
         <h1 className="text-white  bg-danger font-weight-light py-5 px-3">
           Ready to <span className="text-warning"> CheckOut</span>
         </h1>
         <Container>
           <div className="row">
-            <div className="col-md-6">{loadProducts()}</div>
+            <div className="col-md-6">
+              {loadProducts()}
+
+              <div className="m-5 p-2"></div>
+            </div>
             <div className="col-md-6">
               {isAuthenticated() && products ? (
                 <CheckoutB
@@ -55,7 +61,9 @@ const Home = () => {
                   reload={reload}
                 />
               ) : (
-                <h2>LOGIN TO PURCHASE</h2>
+                <h2 className="text-dark text-center p-5 display-5">
+                  Login to make purchase
+                </h2>
               )}
             </div>
           </div>

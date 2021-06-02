@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Base from "../core/Base";
 import { signin, isAuthenticated, authenticate } from "../auth/helper/index";
-import { Link, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 const Signin = () => {
   const [obj, setObj] = useState({
@@ -12,7 +12,7 @@ const Signin = () => {
     didRedirect: false,
   });
 
-  const { user } = isAuthenticated();
+  // const { user } = isAuthenticated();
 
   const handleChange = (name) => (event) => {
     setObj({ ...obj, errors: false, [name]: event.target.value });
@@ -62,15 +62,15 @@ const Signin = () => {
     }
   };
 
-  const handleRedirect = () => {
-    if (obj.didRedirect) {
-      if (user && user.role === 1) {
-        return <Redirect to="/admin/dashboard" />;
-      } else {
-        return <Redirect to="/user/dashboard" />;
-      }
-    }
-  };
+  // const handleRedirect = () => {
+  //   if (obj.didRedirect) {
+  //     if (user && user.role === 1) {
+  //       return <Redirect to="/admin/dashboard" />;
+  //     } else {
+  //       return <Redirect to="/user/dashboard" />;
+  //     }
+  //   }
+  // };
 
   return isAuthenticated() ? (
     <Redirect to="/shop" />
@@ -122,6 +122,7 @@ const Signin = () => {
           </div>
         </div>
       </form>
+      <div className="m-5 p-2"></div>
     </Base>
   );
 };

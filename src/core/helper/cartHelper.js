@@ -6,7 +6,7 @@ export const addToCart = (item, next) => {
     }
     cart.push({
       ...item,
-      count: 1
+      count: 1,
     });
     localStorage.setItem("cart", JSON.stringify(cart));
     next();
@@ -21,18 +21,18 @@ export const loadCart = () => {
   }
 };
 
-export const removeItem = pid => {
+export const removeItem = (pid) => {
   let cart = [];
   if (window) {
     if (localStorage.getItem("cart")) {
       cart = JSON.parse(localStorage.getItem("cart"));
-      cart = cart.filter(p => p._id != pid);
+      cart = cart.filter((p) => p._id !== pid);
       localStorage.setItem("cart", JSON.stringify(cart));
     }
   }
 };
 
-export const emptyCart = next => {
+export const emptyCart = (next) => {
   if (window) {
     localStorage.removeItem("cart");
     let cart = [];
