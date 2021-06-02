@@ -2,7 +2,7 @@
   "name": "candyshop",
   "version": "0.1.7",
   "private": true,
-  "homepage": "http://heapowl.github.io/CandyStore",
+  "homepage": "http://heapowl.github.io/CandyShop",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
