@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import Home from "./core/Home";
 
 import Cart from "./core/Cart";
@@ -18,7 +18,7 @@ import UpdateCategory from "./admin/UpdateCategory";
 import Landing from "./core/Landing";
 const Routes = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <Switch>
         <Route path="/" exact component={Landing} />
         <Route path="/shop" exact component={Home} />
@@ -46,7 +46,7 @@ const Routes = () => {
           component={UpdateCategory}
         />
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

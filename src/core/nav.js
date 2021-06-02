@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 import { signout, isAuthenticated } from "../auth/helper/index";
 import "./CSS/nav.css";
 const checkCurrTab = (history, path) => {
-  console.log(history.location.pathname, path);
+  // console.log(history.location.pathname, path);
   if (history.location.pathname === path) {
     return { color: "#ea1c2c" };
   } else {
