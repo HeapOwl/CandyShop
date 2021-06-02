@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/store/static/css/main.9aac58a1.chunk.css",
-    "main.js": "/store/static/js/main.da49775c.chunk.js",
-    "main.js.map": "/store/static/js/main.da49775c.chunk.js.map",
-    "runtime-main.js": "/store/static/js/runtime-main.4339b60a.js",
-    "runtime-main.js.map": "/store/static/js/runtime-main.4339b60a.js.map",
-    "static/js/2.d6d624ce.chunk.js": "/store/static/js/2.d6d624ce.chunk.js",
-    "static/js/2.d6d624ce.chunk.js.map": "/store/static/js/2.d6d624ce.chunk.js.map",
-    "index.html": "/store/index.html",
-    "static/css/main.9aac58a1.chunk.css.map": "/store/static/css/main.9aac58a1.chunk.css.map",
-    "static/js/2.d6d624ce.chunk.js.LICENSE.txt": "/store/static/js/2.d6d624ce.chunk.js.LICENSE.txt"
+    "main.css": "/CandyStore/static/css/main.9aac58a1.chunk.css",
+    "main.js": "/CandyStore/static/js/main.1ce61ca0.chunk.js",
+    "main.js.map": "/CandyStore/static/js/main.1ce61ca0.chunk.js.map",
+    "runtime-main.js": "/CandyStore/static/js/runtime-main.a78ca1d0.js",
+    "runtime-main.js.map": "/CandyStore/static/js/runtime-main.a78ca1d0.js.map",
+    "static/js/2.1d63d105.chunk.js": "/CandyStore/static/js/2.1d63d105.chunk.js",
+    "static/js/2.1d63d105.chunk.js.map": "/CandyStore/static/js/2.1d63d105.chunk.js.map",
+    "index.html": "/CandyStore/index.html",
+    "static/css/main.9aac58a1.chunk.css.map": "/CandyStore/static/css/main.9aac58a1.chunk.css.map",
+    "static/js/2.1d63d105.chunk.js.LICENSE.txt": "/CandyStore/static/js/2.1d63d105.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4339b60a.js",
-    "static/js/2.d6d624ce.chunk.js",
+    "static/js/runtime-main.a78ca1d0.js",
+    "static/js/2.1d63d105.chunk.js",
     "static/css/main.9aac58a1.chunk.css",
-    "static/js/main.da49775c.chunk.js"
+    "static/js/main.1ce61ca0.chunk.js"
   ]
 }
