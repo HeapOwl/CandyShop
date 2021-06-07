@@ -1,3 +1,6 @@
+``` check Master Branch for Code ```
+  ```  Deployed link http://candy-shop-react.herokuapp.com/ ```
+
 # CandyShop
 ## Full stack MERN Ecom App 
 
